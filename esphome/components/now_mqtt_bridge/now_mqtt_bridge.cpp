@@ -223,7 +223,7 @@ namespace esphome
             esp_wifi_set_promiscuous_rx_cb(Now_MQTT_BridgeComponent::call_prom_callback);
         }
 
-        void Now_MQTT_BridgeComponent::call_on_data_recv_callback(const uint8_t *mac, const uint8_t *incomingData, int len)
+        void Now_MQTT_BridgeComponent::call_on_data_recv_callback(const esp_now_recv_info *esp_now_info, const uint8_t *incomingData, int len)
         {
             Now_MQTT_BridgeComponent().receivecallback(mac, incomingData, len);
         }
