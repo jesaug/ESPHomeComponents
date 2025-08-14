@@ -22,7 +22,7 @@ namespace esphome
 
             char topic[250];
             char macStr[18];
-            DynamicJsonDocument doc(1024);
+            JsonDocument doc;
             JsonObject dev;
             std::string json;
             std::string message_type;
